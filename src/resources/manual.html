@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;CHARSET=UTF-8">
+<title>Opis programu Fotik</title>
+</head>
+
+<body>
+
+<div style="font-size:11px;font-family:Arial, sans-serif;padding:4px">
+    
+<table border="0" cellspacing="0" cellpadding="0">
+<tr><td valign="middle"><img src="img/icon_large.png" hspace="10" border="0"></td>
+<td>Program <b>"Fotik"</b> to przeglądarka zdjęć, uzupełniona o szereg opcji,
+które umożliwiają przeciwdziałanie niektórym typowym dla starych fotografii problemom.
+</td></tr></table>
+<br><br>
+
+<b><u>Operacje I/O i edycja</u></b>
+<br>
+Możliwy jest odczyt i zapis formatów JPG i PNG.<br>
+Program obsługuje cofnięcie do 10 wersji obrazu wstecz) oraz podgląd oryginalnego obrazu.
+<br><br><br>
+
+<b><u>Podstawowe przekształcenia obrazu:</u></b>
+<ul>
+    <li>Rotacja ( ±90º, 180º ),  odbicie pionowe i poziome obrazu.</li>
+    <li>Skalowanie (do wyboru 3 rodzaje interpolacji).</li>
+</ul>
+<br><br>
+
+<b><u>Operacje na tonie i kolorze</u></b>
+<ul>
+    <li>Histogram globalnej jasności oraz poszczególnych kanałów RGB z funkcjami rozciągania (z zadanym progiem) i wyrównywania.</li>
+    <li>Regulacja jasności i kontrastu obrazu.</li>
+    <li>Korekcja gamma dla globalnej jasności oraz poszczególnych kanałów RGB.</li>
+    <li>Balans HSB (odcień / nasycenie / jasność).</li>
+    <li>Automatyczny balans bieli (wzorowane na algorytmie z programu GIMP)</li>
+</ul>
+
+<p align="center"><img src="img/man/hist.jpg" border="0"></p>
+<br><br>
+
+<b><u>Filtry</u></b>
+<ul>
+<li>Grupa filtrów liniowych – splotowych (odszumiające oraz wyostrzające).</li>
+<li>Filtr medianowy.</li>
+<li>Filtr "Smart blur" ("Inteligentne rozmycie" - kopia efektu znanego m.in. z programu Photoshop).</li>
+<li>Adaptacyjny filtr medianowy (możliwość "odwrócenia" wyznaczonych krawędzi, co w pewnych przypadkach pozwala na bardzo efektywne usunięcie rys i zanieczyszczeń). Definiowanie parametrów filtra wyznaczania krawędzi, możliwość podglądu wyznaczonych krawędzi dla danych parametrów.</li>
+</ul>
+<br><br>
+
+<b><u>Narzędzia lokalne</u></b>
+<ul>
+<li>Warstwa maski – możliwość zaznaczeń prostokątnych i eliptycznych, może posłużyć do przefiltrowania tylko fragmentów obrazu.</li>
+<li>Kadrowanie obrazu.</li>
+<li>Klonowanie (kopiowanie i nakładanie wskazanych fragmentów obrazu).</li>
+<li>Lokalne rozmycie / odszumianie oraz smużenie.</li>
+</ul>
+<br><br>
+
+<b><u>Operacje w dziedzinie częstotliwości</u></b><br />
+Program umożliwia wyliczenie dwuwymiarowej transformaty Fouriera obrazu (w odcieniach szarości bądź w kolorze), a następnie operowanie na wizualizacji widma:
+<ul>
+    <li>Usunięcie częstotliwości odwzorowanych na warstwie maski (podobnie jak w oknie obrazu możliwość wielu zaznaczeń prostokątnych i eliptycznych).</li>
+    <li>Automatyczne usuwanie regularnych wzorów (wyszukiwanie na wizualizacji widma punktów przekraczających wskazany próg jasności, poza wskazanym otoczeniem punktu centralnego).</li>
+    <li>Filtr dolnoprzepustowy ("idealny")</li>
+</ul>
+
+<p align="center"><img src="img/man/fft.jpg" border="0"></p><br>
+
+Wprowadzone w oknie widma zmiany w dziedzinie częstotliwości mogą być następnie wprowadzone do obrazu  dzięki zastosowaniu transformacji odwrotnej.
+
+<br><br>
+
+</div>
+    
+</body>
+
+</html>
