@@ -1,7 +1,6 @@
 # Fotik
 Program "Fotik" to przeglądarka zdjęć, uzupełniona o szereg opcji, które umożliwiają przeciwdziałanie niektórym typowym dla starych fotografii problemom.
 
-*Został napisany jako projekt z przedmiotu Techniki Multimedialne na Politechnice Warszawskiej (01.2016)*
 ### Operacje I/O i edycja 
 
 Możliwy jest odczyt i zapis formatów JPG i PNG. Program obsługuje cofnięcie do 10 wersji obrazu wstecz oraz podgląd oryginalnego obrazu.   
