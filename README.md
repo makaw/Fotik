@@ -39,3 +39,17 @@ Wprowadzone w oknie widma zmiany w dziedzinie częstotliwości mogą być nastę
 
 ----------
 
+![](http://www.kaw.net.pl/fotik_img/histogram.jpg)
+
+![](http://www.kaw.net.pl/fotik_img/fft_col.jpg)
+
+----------
+
+Wykorzystano (z małymi zmianami) kod pochodzący z:
+- http://algs4.cs.princeton.edu/99scientific (klasy addon.FFT i addon.Complex) ,
+- http://stackoverflow.com/a/5021831 (klasa addon.CIELab).
+
+Ponadto wykorzystano fragmenty kodu pochodzące z:
+- http://asserttrue.blogspot.com/2010/08/implementing-smart-blur-in-java.html (klasa processing.SmartBlur)
+- https://docs.oracle.com/javase/tutorial/uiswing/components/scrollpane.html (głównie klasa gui.photoview.PhotoRuler)
+
