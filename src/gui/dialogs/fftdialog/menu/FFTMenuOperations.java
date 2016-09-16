@@ -25,6 +25,7 @@ import javax.swing.JMenuItem;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class FFTMenuOperations extends JMenu {
     
     

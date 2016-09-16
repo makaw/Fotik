@@ -21,6 +21,7 @@ import javax.swing.JPanel;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class BgPanel extends JPanel {
     
   /** Nazwa pliku z obrazkiem tła */  

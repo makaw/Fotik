@@ -23,6 +23,7 @@ import javax.swing.border.EmptyBorder;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ConfirmDialog extends SimpleInfoDialog {
     
    /** Odpowiedź użytkownika: true jeżeli potwierdził, false jeżeli nie */ 

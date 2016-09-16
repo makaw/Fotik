@@ -47,7 +47,7 @@ public class Histogram {
     
     for(int i=0;i<image.getWidth();i++) 
       for(int j=0;j<image.getHeight();j++)  
-       hist[(int)channel.getValue(image.getRGB(i, j))]++;
+       hist[channel.getValue(image.getRGB(i, j))]++;
 
   }
   

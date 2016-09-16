@@ -39,11 +39,12 @@ import processing.ProcessedImage;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class GammaCorrectionDialog extends ThumbnailDialog implements IProgressInvoker {
 
-   private static final float minVal = 0.2f;
-   private static final float maxVal = 6.0f;
-   private static final float defaultVal = 1.0f;
+   private static final float MIN_VAL = 0.2f;
+   private static final float MAX_VAL = 6.0f;
+   private static final float DEF_VAL = 1.0f;
     
    /** Suwak kanału jasności */
    private SliderField brightField;
@@ -94,20 +95,20 @@ public class GammaCorrectionDialog extends ThumbnailDialog implements IProgressI
    protected JPanel getFieldsPanel() { 
              
        
-      redField = new SliderField("\u03b3: "+HistogramChannel.RED.toString(), 1, minVal, maxVal, GUI.normalFont);
+      redField = new SliderField("\u03b3: "+HistogramChannel.RED.toString(), 1, MIN_VAL, MAX_VAL, GUI.NORMAL_FONT);
       redField.setVisible(false);
-      redField.setValue(defaultVal); 
+      redField.setValue(DEF_VAL); 
       
-      greenField = new SliderField("\u03b3: "+HistogramChannel.GREEN.toString(), 1, minVal, maxVal, GUI.normalFont);
+      greenField = new SliderField("\u03b3: "+HistogramChannel.GREEN.toString(), 1, MIN_VAL, MAX_VAL, GUI.NORMAL_FONT);
       greenField.setVisible(false);
-      greenField.setValue(defaultVal); 
+      greenField.setValue(DEF_VAL); 
       
-      blueField = new SliderField("\u03b3: "+HistogramChannel.BLUE.toString(), 1, minVal, maxVal, GUI.normalFont);
+      blueField = new SliderField("\u03b3: "+HistogramChannel.BLUE.toString(), 1, MIN_VAL, MAX_VAL, GUI.NORMAL_FONT);
       blueField.setVisible(false);
-      blueField.setValue(defaultVal);       
+      blueField.setValue(DEF_VAL);       
 
-      brightField = new SliderField("\u03b3: "+HistogramChannel.ALL.toString(), 1, minVal, maxVal, GUI.normalFont);
-      brightField.setValue(defaultVal); 
+      brightField = new SliderField("\u03b3: "+HistogramChannel.ALL.toString(), 1, MIN_VAL, MAX_VAL, GUI.NORMAL_FONT);
+      brightField.setValue(DEF_VAL); 
       
       
       padPanel = new JPanel();
@@ -157,7 +158,7 @@ public class GammaCorrectionDialog extends ThumbnailDialog implements IProgressI
       
       channelsField = new JCheckBox("Kana\u0142y RGB", false);
       channelsField.setFocusPainted(false);
-      channelsField.setFont(GUI.normalFont);
+      channelsField.setFont(GUI.NORMAL_FONT);
       
       
       channelsField.addActionListener(new ActionListener() {
@@ -201,10 +202,10 @@ public class GammaCorrectionDialog extends ThumbnailDialog implements IProgressI
          @Override
          public void actionPerformed(final ActionEvent e) {   
            
-            brightField.setValue(defaultVal);
-            redField.setValue(defaultVal);
-            greenField.setValue(defaultVal);
-            blueField.setValue(defaultVal);
+            brightField.setValue(DEF_VAL);
+            redField.setValue(DEF_VAL);
+            greenField.setValue(DEF_VAL);
+            blueField.setValue(DEF_VAL);
             
             refresh();
              

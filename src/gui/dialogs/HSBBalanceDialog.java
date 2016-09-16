@@ -34,6 +34,7 @@ import fotik.IConf;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class HSBBalanceDialog extends ThumbnailDialog  implements IProgressInvoker {
 
    /** Suwak parametru odcienia */
@@ -68,11 +69,11 @@ public class HSBBalanceDialog extends ThumbnailDialog  implements IProgressInvok
    @Override
    protected JPanel getFieldsPanel() { 
       
-      hueField = new SliderField("Odcie\u0144", 0, -127, 127, GUI.normalFont);
+      hueField = new SliderField("Odcie\u0144", 0, -127, 127, GUI.NORMAL_FONT);
       hueField.setValue(0);       
-      saturationField = new SliderField("Nasycenie", 0, -127, 127, GUI.normalFont);
+      saturationField = new SliderField("Nasycenie", 0, -127, 127, GUI.NORMAL_FONT);
       saturationField.setValue(0);       
-      brightnessField = new SliderField("Jasno\u015b\u0107", 0, -127, 127, GUI.normalFont);
+      brightnessField = new SliderField("Jasno\u015b\u0107", 0, -127, 127, GUI.NORMAL_FONT);
       brightnessField.setValue(0);
 
       

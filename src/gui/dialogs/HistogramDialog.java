@@ -32,6 +32,7 @@ import processing.HistogramChannel;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class HistogramDialog extends SimpleDialog {
 
    /** Domyślnie wybrany kanał */
@@ -78,12 +79,12 @@ public class HistogramDialog extends SimpleDialog {
       p2.setOpaque(false);
       
       channelBox = new JComboBox<>();
-      channelBox.setFont(GUI.normalFont);
+      channelBox.setFont(GUI.NORMAL_FONT);
       channelBox.setPreferredSize(new Dimension(350, 30));      
       for (HistogramChannel c: HistogramChannel.values()) channelBox.addItem(c);   
       channelBox.setSelectedItem(defaultChannel);
       JLabel txt = new JLabel("Kana\u0142: ");
-      txt.setFont(GUI.normalFont);
+      txt.setFont(GUI.NORMAL_FONT);
       p2.add(txt);
       p2.add(channelBox);      
       p.add(p2);

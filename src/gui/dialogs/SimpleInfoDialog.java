@@ -28,6 +28,7 @@ import fotik.IConf;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public abstract class SimpleInfoDialog extends SimpleDialog {
     
    private final String textHeader; 

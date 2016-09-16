@@ -27,6 +27,7 @@ import javax.swing.border.LineBorder;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public abstract class ThumbnailDialog extends SimpleDialog {
 
     

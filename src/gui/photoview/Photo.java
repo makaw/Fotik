@@ -33,17 +33,18 @@ import javax.swing.SwingConstants;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class Photo extends JLabel implements Scrollable {
 
     /** Przezroczystość warstwy maski (wartość kanału alpha) */
-    private static final int maskLayerAlpha = 90;
+    private static final int MASK_LAYER_ALPHA = 90;
     
     /** Maksymalna jednostka przewinięcia */
     private int maxUnitInc;
     /** Obraz */
     private ProcessedImage image;
     /** Powiększenie obrazu */
-    private double zoom = GUI.defaultZoom;
+    private double zoom = GUI.DEFAULT_ZOOM;
     /** Warstwa maski */
     private final Mask mask;
     /** Czy widoczna warstwa maski */
@@ -268,7 +269,7 @@ public class Photo extends JLabel implements Scrollable {
       // nałożenie warstwy maski
       if (maskLayerVisible) {
           
-        g2.setColor(new Color(200, 255, 255, maskLayerAlpha));
+        g2.setColor(new Color(200, 255, 255, MASK_LAYER_ALPHA));
         g2.fillRect(0, 0, getWidth(), getHeight()); 
         
         // bieżące zaznaczenie

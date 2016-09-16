@@ -25,6 +25,7 @@ import javax.swing.KeyStroke;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class MenuEdit extends JMenu {
     
   /** Elementy menu */  

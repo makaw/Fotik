@@ -29,6 +29,7 @@ import javax.swing.border.EmptyBorder;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class PromptDialog extends SimpleDialog {
     
    /** Pytanie */
@@ -119,7 +120,7 @@ public class PromptDialog extends SimpleDialog {
       p2.setOpaque(false);
       
       JLabel txt = new JLabel(question);
-      txt.setFont(GUI.normalFont);
+      txt.setFont(GUI.NORMAL_FONT);
       p2.add(txt);
                  
       setAnswerField();
@@ -127,7 +128,7 @@ public class PromptDialog extends SimpleDialog {
       
       if (getSymbol() != null) {
         txt = new JLabel(getSymbol());
-        txt.setFont(GUI.normalFont);
+        txt.setFont(GUI.NORMAL_FONT);
         p2.add(txt);  
       }
       

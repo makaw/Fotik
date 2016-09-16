@@ -20,6 +20,7 @@ import java.util.Iterator;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class Mask extends HashSet<Shape> {
     
   /** Szerokość i wysokość obrazu */  
@@ -119,10 +120,10 @@ public class Mask extends HashSet<Shape> {
         
       Ellipse2D.Double ellipse = (Ellipse2D.Double)shape;  
       Ellipse2D.Double e = new Ellipse2D.Double();
-      e.width = (int)((double)ellipse.width*(zoom/100.0));  
-      e.height = (int)((double)ellipse.height*(zoom/100.0));  
-      e.x = (int)((double)ellipse.x*(zoom/100.0));  
-      e.y = (int)((double)ellipse.y*(zoom/100.0));  
+      e.width = (int)(ellipse.width*(zoom/100.0));  
+      e.height = (int)(ellipse.height*(zoom/100.0));  
+      e.x = (int)(ellipse.x*(zoom/100.0));  
+      e.y = (int)(ellipse.y*(zoom/100.0));  
       return e;
         
     }

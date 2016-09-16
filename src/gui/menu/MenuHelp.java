@@ -26,6 +26,7 @@ import javax.swing.KeyStroke;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class MenuHelp extends JMenu {
     
    /**

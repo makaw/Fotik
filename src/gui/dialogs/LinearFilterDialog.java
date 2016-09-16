@@ -44,6 +44,7 @@ import java.awt.image.BufferedImage;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class LinearFilterDialog extends SimpleDialog {
     
     
@@ -91,11 +92,11 @@ public class LinearFilterDialog extends SimpleDialog {
       // rodzaj filtra
       
       JLabel txt = new JLabel("Filtr: ");
-      txt.setFont(GUI.normalFont);
+      txt.setFont(GUI.NORMAL_FONT);
       p2.add(txt);
            
       filterBox = new JComboBox<>();
-      filterBox.setFont(GUI.normalFont);
+      filterBox.setFont(GUI.NORMAL_FONT);
       filterBox.setPreferredSize(new Dimension(350, 30));
       
       for (LinearFilterType f: LinearFilterType.values()) 
@@ -111,7 +112,7 @@ public class LinearFilterDialog extends SimpleDialog {
       p2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
       p2.setOpaque(false);
       paramFieldLabel = new JLabel("Parametr: ");
-      paramFieldLabel.setFont(GUI.normalFont);
+      paramFieldLabel.setFont(GUI.NORMAL_FONT);
       p2.add(paramFieldLabel);
       
       paramField = new JTextField(5);
@@ -182,7 +183,7 @@ public class LinearFilterDialog extends SimpleDialog {
        
       showMask((LinearFilterType) filterBox.getSelectedItem(), null);
            
-      filterBox.setFont(GUI.normalFont);
+      filterBox.setFont(GUI.NORMAL_FONT);
       filterBox.setPreferredSize(new Dimension(350, 30));      
       
       

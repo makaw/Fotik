@@ -23,6 +23,7 @@ import javax.swing.JButton;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class PreviewOriginalDialog extends PreviewDialog {
    
 

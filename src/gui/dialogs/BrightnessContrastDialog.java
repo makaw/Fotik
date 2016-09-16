@@ -31,12 +31,13 @@ import fotik.IConf;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class BrightnessContrastDialog extends ThumbnailDialog {
     
    /** Początkowy ("normalny") współczynnik jasności */ 
-   private static final float initialOffset = 10.0f;
+   private static final float INITIAL_OFFSET = 10.0f;
    /** Początkowy ("normalny") współczynnik kontrastu  */
-   private static final float initialScaleFactor = 1.0f;
+   private static final float INITIAL_SCALE_FACTOR = 1.0f;
    
    /** Współczynnik jasności */
    private float offset;
@@ -66,9 +67,9 @@ public class BrightnessContrastDialog extends ThumbnailDialog {
    @Override
    protected JPanel getFieldsPanel() { 
       
-      brightField = new SliderField("Jasno\u015b\u0107", 0, -127, 127, GUI.normalFont);
+      brightField = new SliderField("Jasno\u015b\u0107", 0, -127, 127, GUI.NORMAL_FONT);
       brightField.setValue(0);
-      contrastField = new SliderField("Kontrast", 0, -127, 127, GUI.normalFont);
+      contrastField = new SliderField("Kontrast", 0, -127, 127, GUI.NORMAL_FONT);
       contrastField.setValue(0);
       
       JPanel p = new JPanel();
@@ -79,8 +80,8 @@ public class BrightnessContrastDialog extends ThumbnailDialog {
       p.add(brightField);
       p.add(contrastField);
       
-      offset = initialOffset;
-      scaleFactor = initialScaleFactor;
+      offset = INITIAL_OFFSET;
+      scaleFactor = INITIAL_SCALE_FACTOR;
       
       // listenery
       brightField.addPropertyChangeListener(new PropertyChangeListener() {
@@ -88,7 +89,7 @@ public class BrightnessContrastDialog extends ThumbnailDialog {
         @Override
         public void propertyChange(PropertyChangeEvent evt) {
         
-           offset = initialOffset + (float)(double)evt.getNewValue()*2.0f;           
+           offset = INITIAL_OFFSET + (float)(double)evt.getNewValue()*2.0f;           
            if (offset>254) offset = 254.0f;
            if (offset<-254) offset = -254.0f;
            refresh();
@@ -101,7 +102,7 @@ public class BrightnessContrastDialog extends ThumbnailDialog {
         @Override
         public void propertyChange(PropertyChangeEvent evt) {
         
-           scaleFactor = initialScaleFactor + (float)(double)evt.getNewValue()*0.01f;
+           scaleFactor = INITIAL_SCALE_FACTOR + (float)(double)evt.getNewValue()*0.01f;
            if (scaleFactor>1.99f) scaleFactor = 1.99f;
            if (scaleFactor<0.01f) scaleFactor = 0.01f;
            refresh();
@@ -149,8 +150,8 @@ public class BrightnessContrastDialog extends ThumbnailDialog {
            
            brightField.setValue(0);
            contrastField.setValue(0);
-           offset = initialOffset;
-           scaleFactor = initialScaleFactor;
+           offset = INITIAL_OFFSET;
+           scaleFactor = INITIAL_SCALE_FACTOR;
            refresh();
              
          }

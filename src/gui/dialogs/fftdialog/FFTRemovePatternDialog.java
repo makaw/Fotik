@@ -36,6 +36,7 @@ import java.awt.image.BufferedImage;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class FFTRemovePatternDialog extends SimpleDialog implements IProgressInvoker {          
       
    private static final int defaultRadius = 50;
@@ -77,7 +78,7 @@ public class FFTRemovePatternDialog extends SimpleDialog implements IProgressInv
       p.setBorder(new EmptyBorder(5, 5, 5, 5));
       p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
       
-      radiusField = new SliderField("Promie\u0144 otoczenia centralnego punktu", 0, 5, 250, GUI.normalFont);
+      radiusField = new SliderField("Promie\u0144 otoczenia centralnego punktu", 0, 5, 250, GUI.NORMAL_FONT);
       radiusField.setValue(defaultRadius);
       p.add(radiusField);
       
@@ -86,18 +87,18 @@ public class FFTRemovePatternDialog extends SimpleDialog implements IProgressInv
       p0.setOpaque(false);
       
       JLabel txt = new JLabel("(otoczenie centralnego punktu jest pomijane)");
-      txt.setFont(GUI.smallFont);
+      txt.setFont(GUI.SMALL_FONT);
       txt.setForeground(new Color(0xa0a0a0));
       txt.setBorder(new EmptyBorder(2, 0, 5, 0));
       p0.add(txt);
       p.add(p0);
       
       
-      axisPadField = new SliderField("Odst\u0119p od osi centralnego punktu", 0, 2, 50, GUI.normalFont);
+      axisPadField = new SliderField("Odst\u0119p od osi centralnego punktu", 0, 2, 50, GUI.NORMAL_FONT);
       axisPadField.setValue(defaultAxisPad);
       p.add(axisPadField);
       
-      thresholdField = new SliderField("Graniczna warto\u015b\u0107 jasno\u015bci", 0, 50, 255, GUI.normalFont);
+      thresholdField = new SliderField("Graniczna warto\u015b\u0107 jasno\u015bci", 0, 50, 255, GUI.NORMAL_FONT);
       thresholdField.setValue(defaultThreshold);
       p.add(thresholdField);
       
@@ -107,7 +108,7 @@ public class FFTRemovePatternDialog extends SimpleDialog implements IProgressInv
       p2.setOpaque(false);
       p2.setBorder(new EmptyBorder(0, 50, 0, 0));
       contrastGainedField.setFocusPainted(false);
-      contrastGainedField.setFont(GUI.normalFont);
+      contrastGainedField.setFont(GUI.NORMAL_FONT);
       p2.add(contrastGainedField);    
       
       p.add(p2);

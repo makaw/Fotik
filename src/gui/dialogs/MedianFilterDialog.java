@@ -26,6 +26,7 @@ import java.awt.image.BufferedImage;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class MedianFilterDialog extends PromptDialog implements IProgressInvoker {
     
    /** Rozmiar maski filtra */

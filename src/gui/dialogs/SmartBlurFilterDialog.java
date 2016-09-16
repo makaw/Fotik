@@ -37,6 +37,7 @@ import processing.SmartBlurFilter;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class SmartBlurFilterDialog extends SimpleDialog implements IProgressInvoker {          
       
    /** Pole czułości filtra */
@@ -76,12 +77,12 @@ public class SmartBlurFilterDialog extends SimpleDialog implements IProgressInvo
       JPanel p2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
       p2.setOpaque(false);
       JLabel txt = new JLabel("Odszumiaj\u0105cy filtr liniowy: ");
-      txt.setFont(GUI.normalFont);
+      txt.setFont(GUI.NORMAL_FONT);
       txt.setBorder(new EmptyBorder(0, 0, 5, 0));
       p2.add(txt);      
       
       blurFilterBox = new JComboBox<>();
-      blurFilterBox.setFont(GUI.normalFont);
+      blurFilterBox.setFont(GUI.NORMAL_FONT);
       blurFilterBox.setPreferredSize(new Dimension(340, 30));
       
       // tylko odszumiające i nieparametryzowane
@@ -99,11 +100,11 @@ public class SmartBlurFilterDialog extends SimpleDialog implements IProgressInvo
       
       // parametry algorytmu Smart Blur
       
-      sensitivityField = new SliderField("     Parametr czu\u0142o\u015bci filtra", 1, 1.0, 25.0, GUI.normalFont);
+      sensitivityField = new SliderField("     Parametr czu\u0142o\u015bci filtra", 1, 1.0, 25.0, GUI.NORMAL_FONT);
       sensitivityField.setValue(SmartBlurFilter.defaultSensitivity);
       p.add(sensitivityField);
       
-      sizeField = new SliderField("Rozmiar rozmywanych fragment\u00f3w", 0, 5, 25, GUI.normalFont);
+      sizeField = new SliderField("Rozmiar rozmywanych fragment\u00f3w", 0, 5, 25, GUI.NORMAL_FONT);
       sizeField.setValue(SmartBlurFilter.defaultSize);
       p.add(sizeField);      
       

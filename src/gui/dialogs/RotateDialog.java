@@ -21,6 +21,7 @@ import fotik.IConf;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class RotateDialog extends PromptDialog {
     
    /** Wewn. klasa - elementy listy wyboru */
@@ -77,7 +78,7 @@ public class RotateDialog extends PromptDialog {
        
      // lista wyboru
      rotBox = new JComboBox<>();
-     rotBox.setFont(GUI.normalFont);
+     rotBox.setFont(GUI.NORMAL_FONT);
      rotBox.setPreferredSize(new Dimension(200, 30));
      rotBox.addItem(new Degrees(-90));
      rotBox.addItem(new Degrees(90));

@@ -31,6 +31,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * @version 1.0 
  * 
  */
+@SuppressWarnings("serial")
 public class ImgFileDialog extends SimpleDialog {
     
   /** Komponent wyboru pliku */  
@@ -128,6 +129,7 @@ public class ImgFileDialog extends SimpleDialog {
   /**
    * Wewn. klasa: panel z podgladem wybranego obrazka
    */
+  @SuppressWarnings("serial")
   private class ImgPreview extends JPanel implements PropertyChangeListener {
   
     /** Wymiary miniatury obrazka */  

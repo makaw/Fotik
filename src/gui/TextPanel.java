@@ -23,9 +23,10 @@ import javax.swing.text.StyledDocument;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class TextPanel extends JTextPane {
     
-  private final static String sep = System.getProperty("line.separator");  
+  private final static String SEP = System.getProperty("line.separator");  
   
   private final Style style, style2; 
   private final StyledDocument doc;
@@ -43,8 +44,8 @@ public class TextPanel extends JTextPane {
     style = StyleContext.getDefaultStyleContext().getStyle(
                    StyleContext.DEFAULT_STYLE);
       
-    StyleConstants.setFontFamily(style, GUI.normalFont.getFamily());
-    StyleConstants.setFontSize(style, GUI.normalFont.getSize());
+    StyleConstants.setFontFamily(style, GUI.NORMAL_FONT.getFamily());
+    StyleConstants.setFontSize(style, GUI.NORMAL_FONT.getSize());
     StyleConstants.setForeground(style, Color.DARK_GRAY);
     StyleConstants.setBackground(style, getBackground());
        
@@ -62,7 +63,7 @@ public class TextPanel extends JTextPane {
    */
   public void setText(String txt, boolean bold) {
     
-      txt = txt.replace("\n", sep);
+      txt = txt.replace("\n", SEP);
       
       try {          
         doc.insertString(doc.getLength(), txt, bold ? style2 : style);

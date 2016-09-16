@@ -29,6 +29,7 @@ import javax.swing.JPanel;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class PreviewDialog extends SimpleDialog implements IPhotoFrame {
    
    private final BufferedImage image; 

@@ -22,10 +22,11 @@ import javax.swing.JPanel;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class HistogramChart extends JPanel {
 
    /** Szerokość pojedynczego słupka histogramu */
-   protected static final float minBarWidth = 2.0f;
+   protected static final float MIN_BAR_WIDTH = 2.0f;
    /** Histogram (dane) */
    private Histogram histogram;
    /** Kolor słupków */
@@ -42,7 +43,7 @@ public class HistogramChart extends JPanel {
       super(); 
       this.histogram = histogram;
       this.barColor = barColor;
-      setPreferredSize(new Dimension((int)(255.0f * minBarWidth) + 11, 150));
+      setPreferredSize(new Dimension((int)(255.0f * MIN_BAR_WIDTH) + 11, 150));
       setMaximumSize(getPreferredSize());
       
    }
@@ -81,7 +82,7 @@ public class HistogramChart extends JPanel {
       g2d.setColor(Color.DARK_GRAY);
       g2d.drawRect(xOffset, yOffset, width, height);
                 
-      int barWidth = (int)Math.max(minBarWidth,  Math.floor((float) width/255.0f));
+      int barWidth = (int)Math.max(MIN_BAR_WIDTH,  Math.floor((float) width/255.0f));
       float maxValue = (float) histogram.getMaxValue();
                 
       int pos = xOffset;

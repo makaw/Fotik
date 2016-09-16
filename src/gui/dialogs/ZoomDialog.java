@@ -21,6 +21,7 @@ import fotik.IConf;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ZoomDialog extends PromptDialog {          
           
    /** Maksymalne powiększenie (%) */

@@ -39,6 +39,7 @@ import processing.LinearFilterType;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class AdaptiveMedianFilterDialog extends SimpleDialog implements IProgressInvoker {
     
    /** Rozmiar maski filtra medianowego */ 
@@ -86,34 +87,34 @@ public class AdaptiveMedianFilterDialog extends SimpleDialog implements IProgres
      p.setOpaque(false);
      p.setPreferredSize(new Dimension(380, 330));
 
-     thresholdField = new SliderField("Pr\u00f3g kwalifikowania kraw\u0119dzi: ", 0, 1, 20, GUI.normalFont);
+     thresholdField = new SliderField("Pr\u00f3g kwalifikowania kraw\u0119dzi: ", 0, 1, 20, GUI.NORMAL_FONT);
      thresholdField.setValue(AdaptiveMedianFilter.defaultThresholdSize);  
      p.add(thresholdField);  
      
      p.add(new JLabel(" "));
      
-     edgeParamField = new SliderField("Par. filtra wykr. kraw\u0119dzi \u03c1: ", 1, 0.1, 19.9, GUI.normalFont);
+     edgeParamField = new SliderField("Par. filtra wykr. kraw\u0119dzi \u03c1: ", 1, 0.1, 19.9, GUI.NORMAL_FONT);
      edgeParamField.setValue(LinearFilterFactory.getFilter(LinearFilterType.EDGE_DETECT).getDefaultParam());  
      p.add(edgeParamField);  
      
      p.add(new JLabel(" "));
      
      noiseRemoveEdgeDetectField = new JCheckBox("Odszumienie przed wykrywaniem kraw\u0119dzi");
-     noiseRemoveEdgeDetectField.setFont(GUI.normalFont);
+     noiseRemoveEdgeDetectField.setFont(GUI.NORMAL_FONT);
      noiseRemoveEdgeDetectField.setFocusPainted(false);
      p.add(noiseRemoveEdgeDetectField);     
      
      p.add(new JLabel(" "));     
      
      inverseEdgeDetectField = new JCheckBox("Odwr\u00f3cenie wykrywania kraw\u0119dzi             ");
-     inverseEdgeDetectField.setFont(GUI.normalFont);
+     inverseEdgeDetectField.setFont(GUI.NORMAL_FONT);
      inverseEdgeDetectField.setFocusPainted(false);
      p.add(inverseEdgeDetectField);
      
      p.add(new JLabel(" "));
      
      JLabel txt = new JLabel("Rozmiar maski filtru medianowego: ");
-     txt.setFont(GUI.normalFont);
+     txt.setFont(GUI.NORMAL_FONT);
      p.add(txt);
                  
      medianSizeField = new JTextField(5);

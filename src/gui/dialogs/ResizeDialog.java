@@ -34,6 +34,7 @@ import javax.swing.JComboBox;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ResizeDialog extends SimpleDialog {          
       
    
@@ -145,20 +146,20 @@ public class ResizeDialog extends SimpleDialog {
       JPanel p2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
         
       JLabel txt = new JLabel("Nowe wymiary: ");
-      txt.setFont(GUI.normalFont);
+      txt.setFont(GUI.NORMAL_FONT);
       p2.add(txt);
            
       final JTextField widthField = new JTextField(5);
       final JTextField heightField = new JTextField(5);
       
-      widthField.setFont(GUI.normalFont);
+      widthField.setFont(GUI.NORMAL_FONT);
       widthField.setPreferredSize(new Dimension(100, 30));
       widthField.setText(String.valueOf(frame.getPhotoPanel().getPhoto().getImage().getWidth()));           
       p2.add(widthField);
       
       p2.add(new JLabel(" \u00d7 "));
       
-      heightField.setFont(GUI.normalFont);
+      heightField.setFont(GUI.NORMAL_FONT);
       heightField.setPreferredSize(new Dimension(100, 30));
       heightField.setText(String.valueOf(frame.getPhotoPanel().getPhoto().getImage().getHeight()));           
       p2.add(heightField);     
@@ -174,7 +175,7 @@ public class ResizeDialog extends SimpleDialog {
       p2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
       p2.setOpaque(false);
       keepRatioField.setFocusPainted(false);
-      keepRatioField.setFont(GUI.normalFont);
+      keepRatioField.setFont(GUI.NORMAL_FONT);
       p2.add(keepRatioField);    
       
       p.add(p2);
@@ -182,10 +183,10 @@ public class ResizeDialog extends SimpleDialog {
       p2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
       p2.setOpaque(false);
       txt = new JLabel("Typ interpolacji: ");
-      txt.setFont(GUI.normalFont);
+      txt.setFont(GUI.NORMAL_FONT);
       p2.add(txt);
       
-      interpolationField.setFont(GUI.normalFont);
+      interpolationField.setFont(GUI.NORMAL_FONT);
       interpolationField.setSelectedIndex(0);
       p2.add(interpolationField);  
       

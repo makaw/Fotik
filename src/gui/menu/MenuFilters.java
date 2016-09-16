@@ -29,6 +29,7 @@ import javax.swing.JMenuItem;
  * 
  * 
  */
+@SuppressWarnings("serial")
 public class MenuFilters extends JMenu {
     
    /** Elementy menu */ 

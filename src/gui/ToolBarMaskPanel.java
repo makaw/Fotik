@@ -30,6 +30,7 @@ import javax.swing.event.ChangeListener;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ToolBarMaskPanel extends JPanel {
    
     
@@ -55,7 +56,7 @@ public class ToolBarMaskPanel extends JPanel {
      
      maskVisibleItem = new JCheckBox("Maska (filtry)", true);
      maskVisibleItem.setOpaque(false);
-     maskVisibleItem.setFont(GUI.normalFont);
+     maskVisibleItem.setFont(GUI.NORMAL_FONT);
      maskVisibleItem.setFocusPainted(false);
      maskVisibleItem.setSelected(false);
     

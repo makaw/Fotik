@@ -26,6 +26,7 @@ import processing.imagefft.ImageFFTOp;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class FFTLowPassDialog extends PromptDialog implements IProgressInvoker {
     
    /** Promień filtra */

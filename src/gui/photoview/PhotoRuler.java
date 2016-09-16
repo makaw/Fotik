@@ -23,12 +23,13 @@ import javax.swing.SwingConstants;
  * @version 1.0
  * 
  */
+ @SuppressWarnings("serial")
  public class PhotoRuler extends JComponent {
    
    /** Długość linii podziałki (px) */
-   public static final int tickSize = 35;
+   public static final int TICK_SIZE = 35;
    /** Co ile pikseli linia podziałki */
-   public static final int pxMul = 50;
+   public static final int PX_MUL = 50;
    /** Orientacja pozioma/pionowa */
    public final int orient;
    /** True jeżeli jednostka to cm, false jeżeli px */
@@ -78,10 +79,10 @@ import javax.swing.SwingConstants;
    private void setIncrementAndUnits() {
        
      if (cm) {
-        units = (int)(PhotoPanel.cmUnit * (zoom/100.0d));
+        units = (int)(PhotoPanel.CM_UNIT * (zoom/100.0d));
         increment = units;
      } else {
-        units = (int)(pxMul * (zoom/100.0d));
+        units = (int)(PX_MUL * (zoom/100.0d));
         increment = units / 2;
      }
      
@@ -97,11 +98,11 @@ import javax.swing.SwingConstants;
    }
 
    public void setPreferredHeight(int ph) {
-     setPreferredSize(new Dimension(tickSize, ph));
+     setPreferredSize(new Dimension(TICK_SIZE, ph));
    }
 
    public void setPreferredWidth(int pw) {
-     setPreferredSize(new Dimension(pw, tickSize));
+     setPreferredSize(new Dimension(pw, TICK_SIZE));
    }
 
    @Override
@@ -111,7 +112,7 @@ import javax.swing.SwingConstants;
 
      g.setColor(bgColor);
      g.fillRect(drawHere.x, drawHere.y, drawHere.width, drawHere.height);
-     g.setFont(GUI.smallFont);
+     g.setFont(GUI.SMALL_FONT);
      g.setColor(Color.black);
 
      int end, start, tickLength;
@@ -132,10 +133,10 @@ import javax.swing.SwingConstants;
         text = Integer.toString(0) + (cm ? " cm" : " px");
         tickLength = 10;
         if (orient == SwingConstants.HORIZONTAL) {
-          g.drawLine(0, tickSize-1, 0, tickSize-tickLength-1);
+          g.drawLine(0, TICK_SIZE-1, 0, TICK_SIZE-tickLength-1);
           g.drawString(text, 2, 21);
         } else {
-          g.drawLine(tickSize-1, 0, tickSize-tickLength-1, 0);
+          g.drawLine(TICK_SIZE-1, 0, TICK_SIZE-tickLength-1, 0);
           g.drawString(text, 5, 13);
         }
         start = (int)inc;
@@ -146,7 +147,7 @@ import javax.swing.SwingConstants;
      
        if (j % 4 == 0)  {
           tickLength = 10;
-          text = Integer.toString((int)((isCm() ? i : i*pxMul)/units));
+          text = Integer.toString((int)((isCm() ? i : i*PX_MUL)/units));
        } else {
           tickLength = 6;
           text = null;
@@ -154,10 +155,10 @@ import javax.swing.SwingConstants;
 
        if (tickLength != 0) {
           if (orient == SwingConstants.HORIZONTAL) {
-             g.drawLine(i, tickSize-1, i, tickSize-tickLength-1);
+             g.drawLine(i, TICK_SIZE-1, i, TICK_SIZE-tickLength-1);
              if (text != null) g.drawString(text, i-3, 21);
           } else {
-             g.drawLine(tickSize-1, i, tickSize-tickLength-1, i);
+             g.drawLine(TICK_SIZE-1, i, TICK_SIZE-tickLength-1, i);
              if (text != null) g.drawString(text, 5, i+9);
           }
        }

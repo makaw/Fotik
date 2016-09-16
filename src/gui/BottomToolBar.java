@@ -34,6 +34,7 @@ import javax.swing.SwingConstants;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class BottomToolBar extends JToolBar {
 
   /** Pole powiększenia widoku */
@@ -44,7 +45,7 @@ public class BottomToolBar extends JToolBar {
   private final ToolBarPanel toolPanel;  
   
   /** Kolor linii separatora */
-  private static final Color sepColor = new Color(0xccccff);
+  private static final Color SEP_COLOR = new Color(0xccccff);
   /** Okno z panelem przetwarzanego obrazu */
   private final IPhotoFrame photoFrame;
   
@@ -53,14 +54,15 @@ public class BottomToolBar extends JToolBar {
   /**
    * Wewn. klasa - separator grup przycisków
    */
+  @SuppressWarnings("serial")
   private class ToolBarSeparator extends JSeparator {
       
      private ToolBarSeparator() {
          
        super(SwingConstants.VERTICAL);
        setPreferredSize(new Dimension(1, 65));
-       setBackground(sepColor);       
-       setForeground(sepColor);
+       setBackground(SEP_COLOR);       
+       setForeground(SEP_COLOR);
        
      }
       
@@ -83,11 +85,11 @@ public class BottomToolBar extends JToolBar {
     
     setLayout(new FlowLayout(FlowLayout.LEFT));
     setPreferredSize(new Dimension(800, 90));
-    setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, sepColor));
+    setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, SEP_COLOR));
     
     zoomSlider = new SliderField("Powi\u0119kszenie", 0, 5, 200, "%");
     
-    if (photoFrame.getMainFrame().equals(photoFrame)) zoomSlider.setValue((int)GUI.defaultZoom);    
+    if (photoFrame.getMainFrame().equals(photoFrame)) zoomSlider.setValue((int)GUI.DEFAULT_ZOOM);    
     else zoomSlider.setValue(photoFrame.getPhotoPanel().getPhoto().getZoom());
     
     add(zoomSlider);    

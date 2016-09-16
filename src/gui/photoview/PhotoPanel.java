@@ -42,12 +42,13 @@ import javax.swing.SwingConstants;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class PhotoPanel extends JPanel  implements ItemListener {
 
     /** Jeden centymetr */
-    public static final int cmUnit = (int)((double)Toolkit.getDefaultToolkit().getScreenResolution() / 2.54d); 
+    public static final int CM_UNIT = (int)((double)Toolkit.getDefaultToolkit().getScreenResolution() / 2.54d); 
     /** Czy centymetry są początkowo wybrane */
-    private static final boolean defaultCmSelected = false;
+    private static final boolean DEFAULT_CM_SELECTED = false;
     /** Kolor tła panelu */   
     private Color bgColor;
     /** Przewijany obszar obrazu */
@@ -79,6 +80,7 @@ public class PhotoPanel extends JPanel  implements ItemListener {
 
     
     /** Wewn. klasa - narożniki przewijanego obszaru */
+    @SuppressWarnings("serial")
     private class Corner extends JPanel {
       @Override
       protected void paintComponent(Graphics g) {    
@@ -104,7 +106,7 @@ public class PhotoPanel extends JPanel  implements ItemListener {
       
       cmButton = new JToggleButton(ImageRes.getIcon("cm.png"), true);
       cmButton.setFocusPainted(false);
-      cmButton.setSelected(defaultCmSelected);
+      cmButton.setSelected(DEFAULT_CM_SELECTED);
       cmButton.setPreferredSize(new Dimension(20, 20));   
 
     }
@@ -310,7 +312,7 @@ public class PhotoPanel extends JPanel  implements ItemListener {
       double w1 = (double) getPreferredSize().width / photo.getImage().getWidth();
       double h1 = (double) getPreferredSize().height / photo.getImage().getHeight();
       double startZoom = (w1 < h1 ? w1 : h1) * 100.0d;
-      int zoom = (int)(startZoom < GUI.defaultZoom ? startZoom : GUI.defaultZoom);
+      int zoom = (int)(startZoom < GUI.DEFAULT_ZOOM ? startZoom : GUI.DEFAULT_ZOOM);
 
       if (photoFrame != null) {
         photoFrame.setZoomSliderValue(zoom);

@@ -43,22 +43,23 @@ import javax.swing.ImageIcon;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class GUI extends JFrame implements IPhotoFrame {
     
   /** Szerokość okna aplikacji w pikselach */
-  protected static final int fWidth = 800;
+  protected static final int F_WIDTH = 800;
   /** Wysokość okna aplikacji w pikselach */
-  protected static final int fHeight = 670;  
+  protected static final int F_HEIGHT = 670;  
   /** Tytuł okna aplikacji */
-  private static final String fTitle = IConf.APP_NAME;
+  private static final String F_TITLE = IConf.APP_NAME;
   
   /** Domyślne powiększenie widoku  */
-  public static final double defaultZoom = 100.0d;  
+  public static final double DEFAULT_ZOOM = 100.0d;  
   
   /** Używana czcionka (normalna) */  
-  public static final Font normalFont = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
+  public static final Font NORMAL_FONT = new Font(Font.SANS_SERIF, Font.PLAIN, 12);
   /** Używana czcionka (mała) */  
-  public static final Font smallFont = new Font(Font.SANS_SERIF, Font.PLAIN, 10);
+  public static final Font SMALL_FONT = new Font(Font.SANS_SERIF, Font.PLAIN, 10);
   
   /** Górny pasek narzędziowy */
   private final BottomToolBar toolBar;
@@ -75,7 +76,7 @@ public class GUI extends JFrame implements IPhotoFrame {
    */  
   public GUI() {
       
-    super(fTitle);  
+    super(F_TITLE);  
     
     setIconImage(ImageRes.getImage("icon.png"));  
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
@@ -83,8 +84,8 @@ public class GUI extends JFrame implements IPhotoFrame {
     
     // umieszczenie okna programu na środku ekranu
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    setBounds((int)((screenSize.getWidth() - fWidth)/2), 
-              (int)((screenSize.getHeight() - fHeight)/2), fWidth, fHeight);
+    setBounds((int)((screenSize.getWidth() - F_WIDTH)/2), 
+              (int)((screenSize.getHeight() - F_HEIGHT)/2), F_WIDTH, F_HEIGHT);
 
        
     getContentPane().setBackground(new Color(0xed, 0xf4, 0xff));
@@ -121,8 +122,8 @@ public class GUI extends JFrame implements IPhotoFrame {
     add(toolBar);             
     
     pack();
-    setMinimumSize(new Dimension(fWidth, fHeight));
-    setSize(fWidth, fHeight);
+    setMinimumSize(new Dimension(F_WIDTH, F_HEIGHT));
+    setSize(F_WIDTH, F_HEIGHT);
     
     // blokowanie minimalnego rozmiaru okna
     final GUI frame = this;
@@ -160,7 +161,7 @@ public class GUI extends JFrame implements IPhotoFrame {
   public void loadImageFile(String fileName) {
       
     if (photoPanel.loadImage(fileName)) {
-      setTitle(fTitle + " [" + new File(fileName).getName() + "]"); 
+      setTitle(F_TITLE + " [" + new File(fileName).getName() + "]"); 
       enableUndoMenuItem(false);
       toolBar.getMaskPanel().setMaskVisible(false);
       toolBar.getToolPanel().setViewModeSelected();
@@ -175,7 +176,7 @@ public class GUI extends JFrame implements IPhotoFrame {
       
     photoPanel.clear();
     enableUndoMenuItem(false);
-    setTitle(fTitle);
+    setTitle(F_TITLE);
       
   }
   

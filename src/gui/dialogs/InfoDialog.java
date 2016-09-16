@@ -22,6 +22,7 @@ import javax.swing.border.EmptyBorder;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class InfoDialog extends SimpleInfoDialog {
         
     

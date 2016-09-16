@@ -29,6 +29,7 @@ import javax.swing.border.TitledBorder;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ProgressDialog extends SimpleDialog implements IProgress {
     
     
@@ -75,7 +76,7 @@ public class ProgressDialog extends SimpleDialog implements IProgress {
     p.setOpaque(false);    
     progressBar.setOpaque(false);    
     Border border = BorderFactory.createTitledBorder(progressBarText);
-    ((TitledBorder)border).setTitleFont(GUI.normalFont);
+    ((TitledBorder)border).setTitleFont(GUI.NORMAL_FONT);
     progressBar.setBorder(border);
     p.add(progressBar);
     p.setBorder(new EmptyBorder(5, 10, 5, 10));

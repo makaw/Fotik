@@ -24,6 +24,7 @@ import fotik.IConf;
  * 
  * 
  */
+@SuppressWarnings("serial")
 public abstract class SimpleDialog extends JDialog {
    
    /** Referencja do GUI */
@@ -58,6 +59,7 @@ public abstract class SimpleDialog extends JDialog {
    /**
     * Klasa wewn. - komponent przycisku zamykajacego okienko dialogowe
     */
+   @SuppressWarnings("serial")
    protected class CloseButton extends JButton {
    
     
@@ -89,6 +91,7 @@ public abstract class SimpleDialog extends JDialog {
    /**
     * Klasa wewn. -  komponent przycisku zamykającego program
     */
+   @SuppressWarnings("serial")
    protected class QuitButton extends JButton {
    
     

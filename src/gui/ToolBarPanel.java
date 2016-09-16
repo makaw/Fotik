@@ -35,6 +35,7 @@ import javax.swing.border.EmptyBorder;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ToolBarPanel extends JPanel {
    
     
@@ -66,7 +67,7 @@ public class ToolBarPanel extends JPanel {
      this.photoPanel = photoPanel;
      
      toolsLabel = new JLabel("Narz\u0119dzia");
-     toolsLabel.setFont(GUI.normalFont);
+     toolsLabel.setFont(GUI.NORMAL_FONT);
     
      final JToggleButton maskAddAreaItem =  new JToggleButton(ImageRes.getIcon("icons/arrow.png"), true);
      maskAddAreaItem.setToolTipText("Tryb przegl\u0105dania");
@@ -127,7 +128,7 @@ public class ToolBarPanel extends JPanel {
     p0.add(cloneThumbCancelBtn);
     cloneThumbPanel.add(p0);
     
-    cloneThumbLabelTitle.setFont(GUI.normalFont);
+    cloneThumbLabelTitle.setFont(GUI.NORMAL_FONT);
     cloneThumbLabelImg.setBorder(new EmptyBorder(5, 10, 0, 10));
     
     
@@ -149,7 +150,7 @@ public class ToolBarPanel extends JPanel {
     blurItem.setToolTipText("Lokalne odszumianie");
     blurItem.setPreferredSize(new Dimension(32, 32));              
     
-    blurSizeField = new SliderField("Promie\u0144", 0, 3, IConf.MAX_BLUR_RADIUS, GUI.normalFont);
+    blurSizeField = new SliderField("Promie\u0144", 0, 3, IConf.MAX_BLUR_RADIUS, GUI.NORMAL_FONT);
     blurSizeField.setValue(10);
     blurSizeField.changeSize(150, 70);
     blurSizeField.setVisible(false);
@@ -171,7 +172,7 @@ public class ToolBarPanel extends JPanel {
     smudgeItem.setToolTipText("Lokalne smu\u017cenie");
     smudgeItem.setPreferredSize(new Dimension(32, 32));
     
-    smudgeSizeField = new SliderField("Rozmiar smugi", 0, 1, IConf.MAX_SMUDGE_SIZE, GUI.normalFont);
+    smudgeSizeField = new SliderField("Rozmiar smugi", 0, 1, IConf.MAX_SMUDGE_SIZE, GUI.NORMAL_FONT);
     smudgeSizeField.setValue(5);
     smudgeSizeField.changeSize(150, 70);
     smudgeSizeField.setVisible(false);    

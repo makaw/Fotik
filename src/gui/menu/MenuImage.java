@@ -36,6 +36,7 @@ import javax.swing.SwingConstants;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class MenuImage extends JMenu implements IProgressInvoker {
     
    /** Elementy menu */ 

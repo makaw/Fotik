@@ -30,6 +30,7 @@ import javax.swing.text.DefaultCaret;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class ManualDialog extends SimpleDialog {
     
    /**

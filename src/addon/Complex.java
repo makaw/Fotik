@@ -154,6 +154,7 @@ public class Complex {
      * @return the complex number whose value is <tt>(alpha * this)</tt>
      * @deprecated Use {@link #scale(double)} instead.
      */
+    @Deprecated
     public Complex times(double alpha) {
         return new Complex(alpha * re, alpha * im);
     }

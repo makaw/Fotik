@@ -17,6 +17,7 @@ import java.awt.image.BufferedImage;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import processing.ProcessedImage;
 
 
@@ -218,12 +219,12 @@ public class ImageFFTOp {
     HashMap<History.PointIndex, Complex> change = fftHistory.pop();
     fftRedo.clear();
     
-    Iterator it = change.entrySet().iterator();
+    Iterator<Entry<History.PointIndex, Complex>> it = change.entrySet().iterator();
     while (it.hasNext()) {
      
-        Map.Entry entry = (Map.Entry)it.next();
-        History.PointIndex index = (History.PointIndex)entry.getKey();
-        Complex c = (Complex)entry.getValue();
+        Map.Entry<History.PointIndex, Complex> entry = it.next();
+        History.PointIndex index = entry.getKey();
+        Complex c = entry.getValue();
         fft[index.channel][index.x][index.y] = new Complex(c.re(), c.im());
         fftRedo.put(index, new Complex(0, 0));
         
@@ -238,11 +239,11 @@ public class ImageFFTOp {
   public void redo() {
      
     HashMap<History.PointIndex, Complex> change = new HashMap<>();
-    Iterator it = fftRedo.entrySet().iterator();
+    Iterator<Entry<History.PointIndex, Complex>>  it = fftRedo.entrySet().iterator();
     while (it.hasNext()) {
      
-        Map.Entry entry = (Map.Entry)it.next();
-        History.PointIndex index = (History.PointIndex)entry.getKey();
+        Map.Entry<History.PointIndex, Complex> entry = it.next();
+        History.PointIndex index = entry.getKey();
         Complex c = fft[index.channel][index.x][index.y];
         change.put(index, new Complex(c.re(), c.im()));
         fft[index.channel][index.x][index.y] = new Complex(0, 0);

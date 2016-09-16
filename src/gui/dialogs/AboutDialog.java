@@ -26,6 +26,7 @@ import gui.TextPanel;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class AboutDialog extends SimpleDialog {
     
     
@@ -37,7 +38,7 @@ public class AboutDialog extends SimpleDialog {
    public AboutDialog(GUI frame, String title) {
        
      super(frame, title);
-     super.showDialog(340, 235); 
+     super.showDialog(340, 215); 
             
    } 
    
@@ -85,10 +86,9 @@ public class AboutDialog extends SimpleDialog {
       
       p = new JPanel(new FlowLayout());
       p.setOpaque(false);
-      p.setBorder(new EmptyBorder(0, 10, 0, 10));
+      p.setBorder(new EmptyBorder(0, 50, 0, 80));
       tx = new TextPanel();      
-      tx.setText("OKNO PW, Techniki Multimedialne (projekt)\n"
-              + "Autor: Maciej Kawecki, 01-02/2016", false);
+      tx.setText("Autor: Maciej Kawecki 2016", false);
       p.add(tx);
       mainPanel.add(p);                  
       

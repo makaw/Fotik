@@ -33,6 +33,7 @@ import javax.swing.event.ChangeListener;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class SliderField extends JPanel {
     
   /** Komponent "suwaka" */
@@ -160,7 +161,7 @@ public class SliderField extends JPanel {
    */  
   public SliderField(String title, int digits, double min, double max, String symbol) {
       
-    this(title, digits, min, max, GUI.normalFont, symbol);
+    this(title, digits, min, max, GUI.NORMAL_FONT, symbol);
       
   }  
   

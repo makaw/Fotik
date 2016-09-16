@@ -39,6 +39,7 @@ import processing.imagefft.ImageFFT;
  * @version 1.0
  * 
  */
+@SuppressWarnings("serial")
 public class FFTDialog extends SimpleDialog  implements IProgressInvoker, IPhotoFrame {
 
    /** Kontener obrazu FFT */

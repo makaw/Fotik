@@ -18,7 +18,7 @@ public interface IConf {
   /** Nazwa aplikacji */
   static final String APP_NAME = "Fotik";
   /** Wersja aplikacji */
-  static final String APP_VERSION = "[09/02/2016]";
+  static final String APP_VERSION = "[09/2016]";
    
   /** Maksymalna ilość cofnięć - maks. rozmiar historii zmian */  
   static final int MAX_UNDOS = 10;   
