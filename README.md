@@ -7,11 +7,11 @@ Image browser (JPG and PNG formats) with some useful features:
 - tone and color, brightness, contrast manipulations,
 - histogram (global and RGB channels, stretching, thresholding)
 - gamma correction, HSB balance, white balance
-- local tools: mask layer, cropping, cloning, blur/sharp/smudge
+- local tools: mask layer, cropping, cloning, blur/smudge
 
 ### Filters
 - group of linear filters (e.g. blur, sharp)
-- median filter, addaptive median filter, 
+- median filter, adaptive median filter,
 - smart blur
 
 ### Spectral manipulations
@@ -20,7 +20,8 @@ Image browser (JPG and PNG formats) with some useful features:
 - regular patterns autoremove
 
 
-*No localisation (Polish language only) at the moment.
+
+*No localisation (Polish language only) at the moment.*
 
 ----------
 
@@ -30,12 +31,12 @@ Image browser (JPG and PNG formats) with some useful features:
 
 ----------
 
-Included (with some little changes) code from: 
+Included (with some little changes) code from:
 
 - http://algs4.cs.princeton.edu/99scientific (classes addon.FFT i addon.Complex) ,
 - http://stackoverflow.com/a/5021831 (class addon.CIELab).
 
-Also included excerpts from: 
+Also included excerpts from:
 
 - http://asserttrue.blogspot.com/2010/08/implementing-smart-blur-in-java.html (class  processing.SmartBlur)
 - https://docs.oracle.com/javase/tutorial/uiswing/components/scrollpane.html (mainly in class gui.photoview.PhotoRuler)
